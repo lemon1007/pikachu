@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffe600;
+    max-height: 100vh;
+}
+
+.skin {
+    position: relative;
+}
+
+#html {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#pikachuInnerHtml {
+    display: none;
+}
+
+#pikachuCssShow {
+    position: fixed;
+    height: 50vh;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border: 1px #ffe600 solid;
+    overflow: scroll;
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+#pikachuCssShow::-webkit-scrollbar {
+    display: none;
+}
+
+#buttons {
+    position: fixed;
+    z-index: 10;
+    top: 53%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons > button {
+    margin-bottom: 10px;
+    background-color: #ffe600;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 55px;
+    height: 40px;
+}
+
+#html {
+    position: fixed;
+    height: 50vh;
+    top: -15%;
+    left: 0;
+    width: 100%;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.nose:hover {
+    transform-origin: center bottom;
+    animation: wave 200ms infinite linear;
+}
